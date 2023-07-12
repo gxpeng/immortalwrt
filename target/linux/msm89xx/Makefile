@@ -20,6 +20,7 @@ DEFAULT_PACKAGES += kmod-usb-chipidea kmod-usb-gadget-eth
 DEFAULT_PACKAGES += kmod-wcn36xx kmod-rproc-wcnss
 DEFAULT_PACKAGES += kmod-rpmsg-wwan-ctrl kmod-bam-dmux kmod-qcom-rproc-modem
 DEFAULT_PACKAGES += rmtfs
+DEFAULT_PACKAGES += kmod-button-hotplug
 
 KERNELNAME:=Image
 
