@@ -79,6 +79,16 @@ define Device/openstick-mf32
 endef
 TARGET_DEVICES += openstick-mf32
 
+define Device/openstick-mf32c
+  $(Device/msm8916)
+  DEVICE_VENDOR := XinXun
+  DEVICE_MODEL := OpenStick MF32c
+  DEVICE_DTS := msm8916-ufi-mf32c
+    DEVICE_DTS_DIR := ../dts
+  DEVICE_PACKAGES := openstick_tweak wpad-basic-wolfssl qcom-msm8916-modem-openstick-mf32c-firmware qcom-msm8916-openstick-mf32c-wcnss-firmware qcom-msm8916-wcnss-openstick-mf32c-nv
+endef
+TARGET_DEVICES += openstick-mf32c
+
 define Device/openstick-mf601
   $(Device/msm8916)
   DEVICE_VENDOR := BenTeng
