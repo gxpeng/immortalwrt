@@ -6,7 +6,7 @@
 
 / {
 	model = "ufi-mf32 4G Modem Stick";
-	compatible = "thwc,ufi-mf32", "qcom,msm8916";
+	compatible = "phang,MF32_MB_V02", "qcom,msm8916";
 
     battery: battery {
 		compatible = "simple-battery";
@@ -101,12 +101,37 @@
 		gpios = <&msmgpio 20 GPIO_ACTIVE_HIGH>;
 	};
 
-	wifi_s: wifi_s {
+	wifi_s {
 		color = <LED_COLOR_ID_BLUE>;
 		default-state = "off";
 		function = LED_FUNCTION_WLAN;
 		gpios = <&msmgpio 27 GPIO_ACTIVE_HIGH>;
 	};
+
+	sim-sel {
+		gpios = <&msmgpio 49 GPIO_ACTIVE_HIGH>;
+		label = "sim:sel";
+		default-state = "on";
+	};
+
+	sim-en {
+		gpios = <&msmgpio 24 GPIO_ACTIVE_HIGH>;
+		label = "sim:en";
+		default-state = "off";
+	};
+
+	sim-sel2 {
+		gpios = <&msmgpio 50 GPIO_ACTIVE_HIGH>;
+		label = "sim:sel2";
+		default-state = "off";
+	};
+
+	sim-en2 {
+		gpios = <&msmgpio 51 GPIO_ACTIVE_HIGH>;
+		label = "sim:en2";
+		default-state = "off";
+	};
+
 };
 
 &mpss {
